@@ -14,10 +14,10 @@ local theme = {}
 
 theme.font = "sans 10"
 
-theme.bg_normal = "#222222"
-theme.bg_focus = "#535d6c"
+theme.bg_normal = "#201233"
+theme.bg_focus = "#2C113C"
 theme.bg_urgent = "#ff0000"
-theme.bg_minimize = "#444444"
+theme.bg_minimize = "#110617" -- too dark
 theme.bg_systray = theme.bg_normal
 
 theme.fg_normal = "#aaaaaa"
@@ -26,7 +26,7 @@ theme.fg_urgent = "#ffffff"
 theme.fg_minimize = "#ffffff"
 
 theme.useless_gap = dpi(2)
-theme.border_width = dpi(1)
+theme.border_width = dpi(0)
 theme.border_normal = "#000000"
 theme.border_focus = "#535d6c"
 theme.border_marked = "#91231c"

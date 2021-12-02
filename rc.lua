@@ -83,16 +83,3 @@ client.connect_signal("manage", function(c)
 		awful.placement.no_offscreen(c)
 	end
 end)
-
--- Autorun programs
---[[autorun = true
-autorunApps =
-{
-    "picom",
-    "aw-qt"
-}
-if autorun then
-   for app = 1, #autorunApps do
-       awful.spawn.single_instance(autorunApps[app])
-   end
-end]]
