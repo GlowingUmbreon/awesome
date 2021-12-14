@@ -5,7 +5,6 @@
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-xresources.set_dpi(80)
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_configuration_dir() .. "themes/"
