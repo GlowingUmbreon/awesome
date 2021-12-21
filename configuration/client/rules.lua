@@ -2,7 +2,7 @@ local awful = require("awful")
 local gears = require("gears")
 local client_keys = require("configuration.client.keys")
 local client_buttons = require("configuration.client.buttons")
-local title_bars = require("configuration.client.titlebars")
+--local title_bars = require("configuration.client.titlebars")
 local beautiful = require("beautiful")
 
 -- {{{ Rules
@@ -26,17 +26,13 @@ awful.rules.rules = {
 	-- Floating clients.
 	{
 		rule_any = {
-			instance = {
-			},
-			class = {
-			},
+			instance = {},
+			class = {},
 
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
 			-- and the name shown there might not match defined rules here.
-			name = {
-			},
-			role = {
-			},
+			name = {},
+			role = {},
 		},
 		properties = { floating = true },
 	},

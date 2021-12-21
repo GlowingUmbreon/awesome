@@ -6,9 +6,9 @@ return {
 	run_on_start_up = {
 		"aw-qt",
 		"picom",
-		'nm-applet --indicator', -- wifi
+		"nm-applet --indicator", -- wifi
 		--'blueberry-tray', -- Bluetooth tray icon
-		'xfce4-power-manager', -- Power manager
+		"xfce4-power-manager", -- Power manager
 		-- '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager (alternate directory if the first one is incorrect)
 		"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1  & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)", -- credential manager
 		--'/usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager

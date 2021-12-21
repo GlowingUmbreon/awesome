@@ -6,6 +6,22 @@ local gears = require("gears")
 configuration = require("configuration.config")
 require("widgets.top-panel")
 
+local keyboard_layout = require("keyboard_layout")
+local kbdcfg = keyboard_layout.kbdcfg({ type = "tui" })
+
+kbdcfg.add_primary_layout("Qwerty", "Q", "")
+kbdcfg.add_primary_layout("Colemak", "C", "colemak")
+
+kbdcfg.bind()
+kbdcfg.widget:buttons(awful.util.table.join(
+	awful.button({}, 1, function()
+		kbdcfg.switch_next()
+	end),
+	awful.button({}, 3, function()
+		kbdcfg.menu:toggle()
+	end)
+))
+
 local TopPanel = function(s)
 	-- Wiboxes are much more flexible than wibars simply for the fact that there are no defaults, however if you'd rather have the ease of a wibar you can replace this with the original wibar code
 	local panel = wibox({
@@ -42,6 +58,7 @@ local TopPanel = function(s)
 			wibox.widget.systray(),
 			mytextclock,
 			s.mylayoutbox,
+			kbdcfg,
 		},
 	})
 
