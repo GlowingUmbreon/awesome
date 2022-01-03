@@ -6,7 +6,7 @@ local gears = require("gears")
 configuration = require("configuration.config")
 require("widgets.top-panel")
 
-local keyboard_layout = require("keyboard_layout")
+local keyboard_layout = require("keyboard_layoutt")
 local kbdcfg = keyboard_layout.kbdcfg({ type = "tui" })
 
 kbdcfg.add_primary_layout("Qwerty", "Q", "")
