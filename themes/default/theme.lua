@@ -11,24 +11,38 @@ local themes_path = gfs.get_configuration_dir() .. "themes/"
 
 local theme = {}
 
-theme.font = "sans 10"
+theme.font = "FiraCode NF Medium 10"
 
-theme.bg_normal = "#201233"
-theme.bg_focus = "#2C113C"
-theme.bg_urgent = "#ff5555"
-theme.bg_minimize = "#110617" -- too dark
+local dracula = {
+	background = "#282a36",
+	currentLine = "#44475a",
+	foreground = "#f8f8f2",
+	comment = "#6272a4",
+	cyan = "#8be9fd",
+	green = "#50fa7b",
+	orange = "#ffb86c",
+	pink = "#ff79c6",
+	purple = "#bd93f9",
+	red = "#ff5555",
+	yellow = "#f1fa8c"
+}
+
+theme.bg_normal = dracula.background
+theme.bg_focus = dracula.currentLine
+theme.bg_urgent = dracula.red
+theme.bg_minimize = dracula.background
 theme.bg_systray = theme.bg_normal
 
-theme.fg_normal = "#aaaaaa"
-theme.fg_focus = "#f8f8f2"
-theme.fg_urgent = "#f8f8f2"
-theme.fg_minimize = "#f8f8f2"
+theme.fg_normal = dracula.foreground
+theme.fg_focus = dracula.purple
+theme.fg_urgent = dracula.foreground
+theme.fg_minimize = dracula.foreground
 
 theme.useless_gap = dpi(1)
 theme.border_width = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus = "#44475a"
-theme.border_marked = "#ff5555"
+theme.border_normal = dracula.background
+theme.border_focus = dracula.currentLine
+theme.border_marked = dracula.red
 
 -- There are other variable sets
 -- overriding the default one when
