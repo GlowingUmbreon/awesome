@@ -15,20 +15,20 @@ theme.font = "sans 10"
 
 theme.bg_normal = "#201233"
 theme.bg_focus = "#2C113C"
-theme.bg_urgent = "#ff0000"
+theme.bg_urgent = "#ff5555"
 theme.bg_minimize = "#110617" -- too dark
 theme.bg_systray = theme.bg_normal
 
 theme.fg_normal = "#aaaaaa"
-theme.fg_focus = "#ffffff"
-theme.fg_urgent = "#ffffff"
-theme.fg_minimize = "#ffffff"
+theme.fg_focus = "#f8f8f2"
+theme.fg_urgent = "#f8f8f2"
+theme.fg_minimize = "#f8f8f2"
 
 theme.useless_gap = dpi(1)
 theme.border_width = dpi(1)
 theme.border_normal = "#000000"
-theme.border_focus = "#535d6c"
-theme.border_marked = "#91231c"
+theme.border_focus = "#44475a"
+theme.border_marked = "#ff5555"
 
 -- There are other variable sets
 -- overriding the default one when
