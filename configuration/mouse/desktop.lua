@@ -4,12 +4,12 @@ require("widgets.mainmenu")
 
 -- Mousebindings that occur on the desktop
 desktopMouse = gears.table.join(
-	awful.button({}, 1, function()
+	--[[awful.button({}, 1, function()
 		mymainmenu:hide()
 	end),
 	awful.button({}, 3, function()
 		mymainmenu:toggle()
-	end)--[[,
+	end)]]--[[,
 
   -- This is the mousewheel on the unfocused desktop
   awful.button({ }, 4, awful.tag.viewnext),
