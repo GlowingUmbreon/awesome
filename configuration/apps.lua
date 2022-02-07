@@ -4,12 +4,10 @@ local menubar = require("menubar")
 apps = {
 
 	-- Your default terminal
-	terminal = "kitty",
+	terminal = "alacritty",
 
 	-- Your default text editor
-	editor = os.getenv("EDITOR") or "nvim",
-
-	-- editor_cmd = terminal .. " -e " .. editor,
+	editor = "vim",
 
 	-- Your default file explorer
 	explorer = "pcmanfm",

@@ -138,7 +138,16 @@ globalKeys = gears.table.join(
 	-- Menubar
 	awful.key({ superKey }, "p", function()
 		menubar.show()
-	end, { description = "show the menubar", group = "launcher" })
+	end, { description = "show the menubar", group = "launcher" }),
+
+	-- Screenshot
+	awful.key({}, "Print", function()
+		awful.util.spawn("escrotum -C")
+	end, { description = "Take a screenshot", group = "screenshot"}),
+
+	awful.key({ superKey }, "Print", function()
+		awful.util.spawn("escrotum -C -s")
+	end, { description = "Take a screenshot", group = "screenshot"})
 )
 
 -- Bind all key numbers to tags.

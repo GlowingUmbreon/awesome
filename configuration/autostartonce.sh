@@ -16,7 +16,7 @@ APPS=(
     # kdeconnect-indicator
     # radeon-profile
     # $HOME/.config/awesomestart
-    udiskie
+    # udiskie
 )
 
 # Some applications start child applications that need to be killed on reload
