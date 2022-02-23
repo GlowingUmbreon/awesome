@@ -22,6 +22,9 @@ kbdcfg.widget:buttons(awful.util.table.join(
 	end)
 ))
 
+local systray = wibox.widget.systray()
+systray.visible = true
+
 local TopPanel = function(s)
 	-- Wiboxes are much more flexible than wibars simply for the fact that there are no defaults, however if you'd rather have the ease of a wibar you can replace this with the original wibar code
 	local panel = wibox({
@@ -55,10 +58,10 @@ local TopPanel = function(s)
 		s.mytasklist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
-			wibox.widget.systray(),
+			systray,
 			mytextclock,
 			s.mylayoutbox,
-			kbdcfg,
+			--kbdcfg,
 		},
 	})
 

@@ -27,18 +27,18 @@ local dracula = {
 	yellow = "#f1fa8c"
 }
 
-theme.bg_normal = dracula.background
-theme.bg_focus = dracula.currentLine
-theme.bg_urgent = dracula.red
-theme.bg_minimize = dracula.background
-theme.bg_systray = theme.bg_normal
+theme.bg_normal = dracula.background.."00"
+theme.bg_focus = dracula.currentLine.."00"
+theme.bg_urgent = dracula.red.."00"
+theme.bg_minimize = dracula.background.."00"
+theme.bg_systray = "#201940" -- systray cannot be transparent, this tries to match the background
 
 theme.fg_normal = dracula.foreground
 theme.fg_focus = dracula.purple
-theme.fg_urgent = dracula.foreground
-theme.fg_minimize = dracula.foreground
+theme.fg_urgent = dracula.red
+theme.fg_minimize = dracula.currentLine
 
-theme.useless_gap = dpi(1)
+theme.useless_gap = dpi(2)
 theme.border_width = dpi(1)
 theme.border_normal = dracula.background
 theme.border_focus = dracula.currentLine
@@ -55,6 +55,7 @@ theme.border_marked = dracula.red
 -- prompt_[fg|bg|fg_cursor|bg_cursor|font]
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 -- Example:
+theme.hotkeys_bg = dracula.background
 theme.hotkeys_border_color = dracula.currentLine
 theme.hotkeys_modifiers_fg = dracula.purple
 
@@ -72,6 +73,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
+theme.menu_bg_normal = dracula.background.."AA"
+theme.menu_background_focus = dracula.currentLine.."AA"
 theme.menu_submenu_icon = themes_path .. "default/submenu.png"
 theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
@@ -108,7 +111,7 @@ theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/titleba
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active = themes_path .. "default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = themes_path .. "default/background.jpeg"
+theme.wallpaper = themes_path .. "default/background.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"
@@ -133,7 +136,7 @@ theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = nil
+theme.icon_theme = "/home/umbreon/.icons/dracula-icons2"
 
 return theme
 
