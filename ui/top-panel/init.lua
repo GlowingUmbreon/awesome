@@ -64,6 +64,7 @@ local TopPanel = function(s)
 			nil,
 			{
 				layout = wibox.layout.fixed.horizontal,
+				systray,
 				date,
 			},
 		},
@@ -71,7 +72,6 @@ local TopPanel = function(s)
 		--s.mytasklist, -- Middle widget
 		--s.mylayoutbox,
 		--kbdcfg,
-		--systray,
 		{ -- Right widgets
 			--layout = wibox.layout.fixed.horizontal,
 			layout = wibox.container.place,
