@@ -14,8 +14,9 @@ local theme = {}
 
 theme.font = "FiraCode NF Medium 10"
 
-local dracula = {
+dracula = {
 	background = "#282a36",
+	transparentBackground = "#282a36bb",
 	currentLine = "#44475a",
 	foreground = "#f8f8f2",
 	comment = "#6272a4",
@@ -28,7 +29,7 @@ local dracula = {
 	yellow = "#f1fa8c"
 }
 
-theme.bg_normal = dracula.background.."55"
+theme.bg_normal = dracula.background.."00" --55
 theme.bg_focus = dracula.currentLine.."00"
 theme.bg_urgent = dracula.red.."00"
 theme.bg_minimize = dracula.background.."00"
@@ -39,8 +40,8 @@ theme.fg_focus = dracula.purple
 theme.fg_urgent = dracula.red
 theme.fg_minimize = dracula.currentLine
 
-theme.useless_gap = dpi(2)
-theme.border_width = dpi(1)
+theme.useless_gap = 3
+theme.border_width = 0.5
 theme.border_normal = dracula.background
 theme.border_focus = dracula.currentLine
 theme.border_marked = dracula.red
@@ -79,8 +80,8 @@ theme.notification_bg = dracula.background
 theme.menu_bg_normal = dracula.background.."AA"
 theme.menu_background_focus = dracula.currentLine.."AA"
 theme.menu_submenu_icon = themes_path .. "default/submenu.png"
-theme.menu_height = dpi(15)
-theme.menu_width = dpi(100)
+theme.menu_height = 30
+theme.menu_width = 100
 
 -- You can add as many variables as
 -- you wish and access them by using

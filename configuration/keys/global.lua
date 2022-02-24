@@ -86,7 +86,8 @@ globalKeys = gears.table.join(
 	awful.key({ superKey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ superKey, "Shift" }, "e", awesome.quit, { description = "quit awesome", group = "awesome" }),
 	awful.key({ "Control", "Mod1" }, "Delete", function()
-		awful.spawn("systemctl suspend")
+		--awful.spawn("systemctl suspend")
+		awful.spawn("rofi -show p -modi p:rofi-power-menu -theme power")
 	end, { description = "suspend", group = "awesome" }),
 
 	awful.key({ superKey }, "l", function()
@@ -138,7 +139,7 @@ globalKeys = gears.table.join(
 	-- Menubar
 	awful.key({ superKey }, "p", function()
 		--menubar.show()
-		awful.util.spawn("rofi -show run -theme mytheme")
+		awful.util.spawn("rofi -show run -theme main")
 	end, { description = "show the menubar", group = "launcher" }),
 
 	-- Screenshot
