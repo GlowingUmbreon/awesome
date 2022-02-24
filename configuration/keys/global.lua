@@ -50,8 +50,8 @@ globalKeys = gears.table.join(
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous by index", group = "client" }),
 	awful.key({ superKey }, "w", function()
-		mymainmenu:show()
-	end, { description = "show main menu", group = "awesome" }),
+		systray.visible = not systray.visible
+	end, { description = "Toggle systray", group = "awesome" }),
 
 	-- Layout manipulation
 	awful.key({ superKey, "Shift" }, "j", function()
@@ -137,7 +137,8 @@ globalKeys = gears.table.join(
 	end, { description = "lua execute prompt", group = "awesome" }),
 	-- Menubar
 	awful.key({ superKey }, "p", function()
-		menubar.show()
+		--menubar.show()
+		awful.util.spawn("rofi -show run -theme mytheme")
 	end, { description = "show the menubar", group = "launcher" }),
 
 	-- Screenshot

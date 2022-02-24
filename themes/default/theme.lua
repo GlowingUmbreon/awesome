@@ -2,6 +2,7 @@
 -- Default awesome theme --
 ---------------------------
 
+local beautiful = require("beautiful")
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
@@ -27,7 +28,7 @@ local dracula = {
 	yellow = "#f1fa8c"
 }
 
-theme.bg_normal = dracula.background.."00"
+theme.bg_normal = dracula.background.."55"
 theme.bg_focus = dracula.currentLine.."00"
 theme.bg_urgent = dracula.red.."00"
 theme.bg_minimize = dracula.background.."00"
@@ -60,15 +61,17 @@ theme.hotkeys_border_color = dracula.currentLine
 theme.hotkeys_modifiers_fg = dracula.purple
 
 -- Generate taglist squares:
-local taglist_square_size = dpi(4)
+local taglist_square_size = dpi(0)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size, theme.fg_normal)
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
+
 
 -- Variables set for theming notifications:
 -- notification_font
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
+theme.notification_bg = dracula.background
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
