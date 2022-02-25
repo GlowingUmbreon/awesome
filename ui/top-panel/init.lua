@@ -44,7 +44,7 @@ local function AddPad(obj)
 end
 
 date = AddPad(wibox.widget.textclock(" %a %b %d "))
-time = AddPad(wibox.widget.textclock(" %H:%M 3"))
+time = AddPad(wibox.widget.textclock(" %H:%M "))
 
 local TopPanel = function(s)
 	local panel = wibox({
