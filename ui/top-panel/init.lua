@@ -74,7 +74,7 @@ local TopPanel = function(s)
 		},
 		{
 			layout = wibox.layout.fixed.horizontal,
-			--systray,
+			systray,
 			date,
 		},
 		layout = wibox.layout.align.horizontal,
