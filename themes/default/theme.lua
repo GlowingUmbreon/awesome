@@ -16,7 +16,7 @@ theme.font = "FiraCode NF Medium 10"
 
 dracula = {
 	background = "#282a36",
-	transparentBackground = "#282a36b2", --b2
+	transparentBackground = "#282a36cc",
 	currentLine = "#44475a",
 	foreground = "#f8f8f2",
 	comment = "#6272a4",
